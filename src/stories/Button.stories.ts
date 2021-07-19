@@ -8,6 +8,14 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'red', value: '#f00' },
+        { name: 'green', value: '#0f0' },
+      ],
+    },
+  },
 } as Meta;
 
 const Template: Story<Button> = (args: Button) => ({
@@ -19,7 +27,14 @@ Primary.args = {
   primary: true,
   label: 'Button',
 };
-
+Primary.parameters = {
+  backgrounds: {
+    values: [
+      { name: 'red', value: '#f00' },
+      { name: 'green', value: '#0f0' },
+    ],
+  },
+};
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Button',
